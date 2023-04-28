@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+header{
+    width: 95%;
+    margin: 0 auto;
+}
+header h1{
+    font-size: 300%;
+    padding: 1% 10% ;
+    color: white;
+}
+header ul{
+    margin-right: 25%;
+}
+header li{
+    float: right;
+    padding-top: 3%;
+    padding-right: 2%;
+    font-weight: bold;
+    list-style: none;
+}
+header a{
+    text-decoration: none;
+    color: blue;
+}
+section{
+    color: white;
+    width: 95%;
+    margin-top: 11%;
+}
+section h3{
+    margin-left: 30%; 
+    font-size: 150%;
+}
+section .one{
+    width: 45%;
+    float: left;
+}
+.one img{
+    padding-top: 10%;
+    padding-left: 4%;
+}
+section .two{
+    width: 55%;
+    float: left;
+}
+.two p{
+    width: 100%;
+    padding-top: 05%;
+}
+#ini{
+    width: 95%;
+    margin: 350px auto 0 auto;
+    text-align: center;
+}
+.for{
+    width: 40%;
+    margin: 1px auto 12px auto;
+}
+.for #as{
+    font-size: 20px;
+    margin-top: 20%;
+}
+.for p{
+    color: rgb(2, 14, 179);
+    font-size: 20px; 
+}
+.for input{
+    width: 80%;
+    border-radius: 43px;
+    height: 30px;
+}
+button{
+    width: 80%;
+    border-radius: 43px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: blue;
+}
+.aw h1{
+    text-align: center;
+    margin: 15px 0px;
+}
+.on, .to{
+    width: 30%;
+    height: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.on{
+    float: left;
+    margin-left: 15%;
+    padding: 12px;
+}
+.to{
+    float: right;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    padding: 12px;
+}
+footer{
+    width: 90%;
+    margin: 0px auto 20px auto;
+}
+footer h1{
+    text-align: center;
+}
+.fin{
+    width: 50%;
+    height: 70px;
+    margin: 0 auto;
+
+}
+.fin img{
+    width: 25%;
+    padding: 5px;
+}
