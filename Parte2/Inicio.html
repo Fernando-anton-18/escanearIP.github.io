@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Página Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+      body {
+  font-family: Arial, sans-serif;
+  margin: 0;  
+  padding: 0;
+  background: white;
+}
+
+header {
+  background-image: linear-gradient(to right, #000000, #2c3e50);
+  color: #fff;
+  padding: 20px;
+}
+
+h2{
+    text-align: center;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing 3s steps(36), blink 0.5s infinite step-end alternate;
+    overflow: hidden;
+}
+@keyframes typing {
+    from{width: 0;}
+}
+@keyframes blink {
+    50%{border-color: transparent;}
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: linear-gradient(315deg, #30e9ff, #0d0551);
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+footer {
+  background-image: linear-gradient(to right, #000000, #2c3e50);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+        <h2>Nuestro bloc - localhost<h2>
+    </nav>
+  </header>
+  <main>
+    <h1>Bienvenido a nuestra página web</h1>
+    <p>Nuestra página web es fácil de usar para cualquier usuario, por que no tiene aun nada.</p>
+    <button><a href="Regístrate.html">¡Regístrate ahora!</a></button>
+  </main>
+  <footer>
+    <p>&copy; 2023. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

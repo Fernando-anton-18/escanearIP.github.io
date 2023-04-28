@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(230, 228, 228);
+}
+section{
+    background-color: rgb(255, 253, 253);
+    width: 80%;
+    max-width: 300px;
+    margin: 100px auto;
+    border-radius: 8px;
+    box-shadow: gray 5px 5px 10px 10px;
+    cursor: pointer;
+}
+h1{
+    padding-top: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+#uno{
+    width: 50%;
+    height: 40px;
+    margin-left: 25%;
+    margin-top: 60px;
+    border: none;
+    background: none;
+    color:  rgb(19, 19, 19);
+}
+#dos{
+    width: 50%;
+    height: 40px;
+    margin-left: 25%;
+    margin-top: 30px;
+    border: none;
+    background: none;
+    color: rgb(19, 19, 19);
+}
+hr{
+    width: 50%;
+    margin: 0 auto;
+    color: rgba(66, 66, 66, 0.657);
+}
+button{
+    width: 50%;
+    height: 40px;
+    margin-left: 25%;
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: rgb(23, 128, 13);
+    color: white;
+    font-weight: bold;
+    box-shadow: gray 4px 4px 10px;
+}
+#pass{
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}

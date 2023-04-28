@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="hora">
+            <span class="hora_one" id="reloj"></span>
+            <span class="hora_two" id="fecha"></span>
+            <p class="foot">𝙰𝚗𝚝ó𝚗</p>
+        </div>
+        <!--parte uno-->
+        <div class="centrar">
+            <input type="text" placeholder="0" class="result" id="outputScreen">
+            <input type="text" class="result_dat" placeholder="result" id="resultado">
+        </div>
+        <!--parte dos-->
+        <div class="container">
+            <div class="fil_0">
+                <button id="About" onclick="dis()">About</button>
+                <button id="About" onclick="Clear()">Clear</button>
+                <button id="enter" onclick="Calculate()">Enter</button>
+            </div>
+            <div class="fil_1">
+                <button id="num9" onclick="display('9')">9</button>
+                <button id="num8" onclick="display('8')">8</button>
+                <button id="num7" onclick="display('7')">7</button>
+                <button class="bot" onclick="display('/')">/</button>
+            </div>
+            <div class="fil_2">
+                <button id="num4" onclick="display('4')">4</button>
+                <button id="num5" onclick="display('5')">5</button>
+                <button id="num6" onclick="display('6')">6</button>
+                <button class="bot" onclick="display('*')">*</button>
+            </div>
+            <div class="fil_2">
+                <button  id="num1" onclick="display('1')">1</button>
+                <button id="num2" onclick="display('2')">2</button>
+                <button id="num3" onclick="display('3')">3</button>
+                <button class="bot" onclick="display('-')">-</button>
+            </div>
+            <div class="fil_3">
+                <button id="num0" onclick="display('0')">0</button>
+                <button onclick="display('.')">.</button>
+                <button class="bot" onclick="del()">x</button>
+                <button class="bot" onclick="display('+')">+</button>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
