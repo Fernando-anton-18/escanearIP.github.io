@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bot</title>
+    <style>
+        /* Estilo del contenedor del bot */
+        .bot {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo del área de mensajes */
+        .bot .mensajes {
+            height: 300px;
+            overflow-y: scroll;
+        }
+
+        /* Estilo de los mensajes */
+        .bot .mensaje {
+            margin-bottom: 10px;
+        }
+
+        .bot .mensaje .emisor {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .bot .mensaje .contenido {
+            margin-top: 5px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        /* Estilo del formulario de entrada */
+        .bot .entrada {
+            margin-top: 10px;
+        }
+
+        .bot .entrada input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .bot .entrada input[type="submit"] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="bot">
+        <div class="mensajes" id="bot-mensajes">
+            <!-- Aquí se mostrarán los mensajes del bot -->
+        </div>
+        <form class="entrada" onsubmit="enviarMensaje(); return false;">
+            <input type="text" id="bot-entrada" placeholder="Escribe tu mensaje..." autofocus>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <script>
+        function enviarMensaje() {
+            var entrada = document.getElementById("bot-entrada");
+            var mensaje = entrada.value.trim();
+
+            if (mensaje !== "") {
+                // Crear nuevo elemento de mensaje del bot
+                var nuevoMensaje = document.createElement("div");
+                nuevoMensaje.classList.add("mensaje");
+                nuevoMensaje.innerHTML = `
+                    <div class="emisor">Tú</div>
+                    <div class="contenido">${mensaje}</div>
+                `;
+
+                // Agregar el nuevo mensaje al contenedor de mensajes
+                var botMensajes = document.getElementById("bot-mensajes");
+                botMensajes.appendChild(nuevoMensaje);
+
+                // Limpiar el campo de entrada
+                entrada.value = "";
+
+                // Llamar a la función de respuesta del bot
+                responderBot(mensaje);
+            }
+
+            return false; // Evitar envío del formulario
+        }
+
+        function responderBot(mensaje) {
+            // Simular respuesta del bot
+            var respuesta = "Hola, soy un bot. ¿Cómo puedo ayudarte?";
+            
+            // Crear nuevo elemento de respuesta del bot
+            var nuevaRespuesta = document.createElement("div");
+            nuevaRespuesta.classList.add("mensaje");
+            nuevaRespuesta.innerHTML = `
+                <div class="emisor">Bot</div>
+                <div class="contenido">${respuesta}</div>
+            `;
+
+            // Agregar la respuesta del bot al contenedor de mensajes
+            var botMensajes = document.getElementById("bot-mensajes");
+            botMensajes.appendChild(nuevaRespuesta);
+        }
+    </script>
+</body>
+</html>

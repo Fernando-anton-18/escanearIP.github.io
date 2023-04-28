@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: auto;
+}
+.bash{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bash video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.bash .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+ .content h1{
+ color:white;
+ text-shadow: 4px 4px 4px #333;
+ text-align: center;
+ font-size: 160%;
+ margin-top: 15%;
+}
+.bash .content h1{
+    color:rgb(213, 23, 219);
+    font-size: 150%;
+    text-shadow: 5px 8px 5px rgba(0, 38, 255, 0.5);
+    text-align: center;                     
+    text-transform: uppercase;
+    padding: 19% 10%;
+}
+
+
+
+
+
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.baner{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.banner .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.baner video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.baner .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.baner .content h1{
+    color:rgb(213, 23, 219);
+    font-size: 150%;
+    text-shadow: 5px 8px 5px rgba(0, 38, 255, 0.5);
+    text-align: center;                     
+    text-transform: uppercase;
+    padding: 19% 10%;
+} **/
