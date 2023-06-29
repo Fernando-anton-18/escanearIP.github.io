@@ -1,0 +1,2 @@
+IP: 192.168.43.132
+ User-Agent: Mozilla/5.0 (Linux; Android 11; moto e20) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.210 Mobile Safari/537.36
