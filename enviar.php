@@ -33,7 +33,7 @@ $context = stream_context_create([
     ]
 ]);
 
-file_get_contents($url, false, $context);
+file_get_contents($url, $context);
 
 // Redireccionando a google.com sin mostrar notificación
 ob_start();
