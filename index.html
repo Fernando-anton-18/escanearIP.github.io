@@ -1,22 +1,159 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la página</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Ident Ip</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@500&display=swap');
+
+        body {
+            font-family: 'Encode Sans Semi Expanded', sans-serif;
+            background: gray;
+        }
+
+        div {
+            background-color: #FAF1F4;
+            max-width: 300px;
+            height: auto;
+            margin: 0px;
+            padding: 0px 0px 4px 0px;
+            border-radius: 20px;
+        }
+
+        #label {
+            background: rgba(11, 5, 29, 0.946);
+            color: White;
+            podition: relative;
+            max-width: 300px;
+            height: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        #iptool {
+            background: rgba(11, 5, 29, 0.946);
+            Color: white;
+            padding: 5px;
+        }
+
+        img {
+            border-radius: 20px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        input {
+            background-color: #FAF1F4;
+            border-radius: 20px;
+            max-width: 200px;
+            height: 50px;
+            border: none;
+            font-size: 20px;
+            padding: 0px 0px 0px 10px;
+            font-family: 'Encode Sans Semi Expanded', sans-serif;
+        }
+
+        button {
+            background-color: #fffbff;
+            max-width: 100px;
+            height: 50px;
+            border: none;    
+            border-radius: 20px;
+            font-family: 'Encode Sans Semi Expanded', sans-serif;
+            font-size: 15px;
+        }
+    </style>
 </head>
-<body>
-    <form action="enviar.php" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre"><br>
-        
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido"><br>
-        
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje"></textarea><br>
-        
-        <input type="submit" value="Enviar">
-    </form>
+
+<body onload="myip()">
+    <center>
+        <div id="iptool">
+            <h1 id="query">Filtrar Datos Públicos</h1>
+        </div>
+        <br>
+        <img id="flag" width="180" height="120">
+        <br><br>
+        <div>
+            <div id="label">PAÍS</div>
+            <p id="country"></p>
+        </div>
+        <br>
+        <div>
+            <div id="label">REGIÓN</div>
+            <p id="region"></p>
+        </div>
+        <br>
+        <div>
+            <div id="label">CIUDAD</div>
+            <p id="city"></p>
+        </div>
+        <br>
+        <div>
+            <div id="label">ISP</div>
+            <p id="isp"></p>
+        </div>
+        <br>
+        <div>
+            <div id="label">IP</div>
+            <p id="myip"></p>
+        </div>
+        <br><br>
+        <input id="ip" type="number" placeholder="Ingresa Ip">
+        <button onclick="customIP()">Buscar</button>
+    </center>
+    <script type="text/javascript">
+        function id(x) {
+            var y = document.getElementById(x);
+            return y;
+        }
+
+        function customIP() {
+            var cip = id("ip").value;
+            checkip(cip);
+        }
+
+        function myip() {
+            var ipapi = "https://api.ipify.org?format=json";
+            fetch(ipapi)
+                .then(res => res.json())
+                .then((out) => {
+                    var ip = out.ip;
+                    id("myip").innerHTML = ip;
+                    checkip(ip);
+                })
+                .catch(err => {
+                    alertM(err);
+                });
+        }
+
+        function flag(x) {
+            var flagapi = "https://flagcdn.com/224x168/" + x.toLowerCase() + ".png";
+            return flagapi;
+        }
+
+        function checkip(x) {
+            var api = "http://ip-api.com/json/"
+            var url = api + x;
+
+            fetch(url)
+                .then(res => res.json())
+                .then((out) => {
+                    id("country").innerHTML = out.country;
+                    id("region").innerHTML = out.regionName;
+                    id("city").innerHTML = out.city;
+                    id("isp").innerHTML = out.isp;
+                    id("query").innerHTML = out.query;
+                    id("flag").setAttribute("src", flag(out.countryCode));
+                })
+                .catch(err => {
+                    alert(err);
+                });
+        }
+    </script>
 </body>
+
 </html>
